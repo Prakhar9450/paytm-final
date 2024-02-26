@@ -1,3 +1,6 @@
 const express = require("express");
-require("dotenv").config();
+const mainRouter = require("./routes/index");
+
 const app = express();
+
+app.use("/api/v1", mainRouter);
